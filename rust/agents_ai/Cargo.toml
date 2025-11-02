@@ -1,0 +1,27 @@
+[package]
+name = "agents_ai"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+agents_traits = { path = "../agents_traits" }
+async-trait = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true }
+futures = { workspace = true }
+uuid = { workspace = true }
+chrono = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+tracing = { workspace = true }
+
+# Optional database storage
+rocksdb = { workspace = true, optional = true }
+
+[features]
+# Enable RocksDB-based message storage
+rocksdb-store = ["rocksdb"]

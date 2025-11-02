@@ -1,0 +1,25 @@
+[package]
+name = "agents_traits"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+async-trait = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+uuid = { workspace = true }
+chrono = { workspace = true }
+futures = { workspace = true }
+tokio = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+
+# Optional actor-based implementation
+ractor = { workspace = true, optional = true }
+
+[features]
+# Enable actor-based thread implementation
+actor = ["ractor"]

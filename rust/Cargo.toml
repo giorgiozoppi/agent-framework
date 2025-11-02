@@ -1,0 +1,49 @@
+[workspace]
+members = [
+    "agents_traits",
+    "agents_ai",
+    "agents_ai_a2a",
+    "agents_workflows",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Microsoft"]
+license = "MIT"
+repository = "https://github.com/microsoft/agent-framework"
+
+[workspace.dependencies]
+# Async runtime
+tokio = { version = "1.0", features = ["full"] }
+async-trait = "0.1"
+futures = "0.3"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# HTTP client for API calls
+reqwest = { version = "0.12", features = ["json", "stream"] }
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Utilities
+uuid = { version = "1.0", features = ["serde", "v4"] }
+chrono = { version = "0.4", features = ["serde"] }
+
+# Tracing and observability
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Async streams
+async-stream = "0.3"
+
+# Actor model concurrency
+ractor = "0.12"
+
+# Database storage
+rocksdb = "0.22"
