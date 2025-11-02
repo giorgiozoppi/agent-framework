@@ -12,6 +12,7 @@ pub trait ChatMessageStore: Send + Sync {
 
     /// Get all messages from the store
     async fn get_messages(&self) -> Result<Vec<ChatMessage>>;
+    
 
     /// Clear all messages from the store
     async fn clear(&mut self) -> Result<()>;

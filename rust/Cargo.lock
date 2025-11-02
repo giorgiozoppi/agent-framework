@@ -58,6 +58,22 @@ dependencies = [
 [[package]]
 name = "agents_workflows"
 version = "0.1.0"
+dependencies = [
+ "agents_traits",
+ "anyhow",
+ "async-stream",
+ "async-trait",
+ "chrono",
+ "dashmap",
+ "futures",
+ "parking_lot",
+ "serde",
+ "serde_json",
+ "thiserror",
+ "tokio",
+ "tracing",
+ "uuid",
+]
 
 [[package]]
 name = "aho-corasick"
